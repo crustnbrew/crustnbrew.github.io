@@ -1,0 +1,250 @@
+/* =====================================================
+   Cakeschahiye – Base Styles (LOCKED V1)
+   Do NOT edit after launch
+   ===================================================== */
+
+/* -------------------- CSS RESET -------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #FFF6EF; /* Cream */
+  color: #2B2B2B;
+  line-height: 1.6;
+}
+
+/* -------------------- BRAND COLORS -------------------- */
+:root {
+  --color-brown: #4B1F1F;
+  --color-pink: #D86C9A;
+  --color-cream: #FFF6EF;
+  --color-dark: #2B2B2B;
+  --color-white: #FFFFFF;
+}
+
+/* -------------------- TYPOGRAPHY -------------------- */
+h1, h2, h3, h4 {
+  color: var(--color-brown);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #444;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* -------------------- LAYOUT HELPERS -------------------- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.2rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* -------------------- BUTTONS -------------------- */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  background-color: #c25885;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-block;
+  background-color: var(--color-brown);
+  color: var(--color-white);
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #3a1717;
+}
+
+/* -------------------- UTILITIES -------------------- */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 2rem; }
+
+/* -------------------- FORMS (BASE) -------------------- */
+input, select, textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-pink);
+}
+/* ================= HERO SECTION ================= */
+
+.hero {
+  min-height: 440px;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255,246,239,0.96),
+      rgba(255,246,239,0.88),
+      rgba(216,108,154,0.25)
+    ),
+    url("/public/images/hero/hero-cartoon.png");
+
+  background-size: cover;
+  background-position: right center;
+  display: flex;
+  align-items: center;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.hero-content {
+  max-width: 520px;
+  padding: 60px 20px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  color: #4B1F1F; /* chocolate brown */
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #2B2B2B;
+  margin-bottom: 22px;
+}
+
+.btn-primary {
+  background: #D86C9A; /* strawberry pink */
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .hero {
+    background-position: center;
+  }
+
+  .hero-content {
+    padding: 40px 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+}
+
+.header-contact {
+  font-weight: 600;
+  color: #4B1F1F;
+}
+
+.header-contact a {
+  text-decoration: none;
+  color: inherit;
+}
+.site-header img {
+  height: 40px;
+  width: auto;
+}
+/* ================= FOOTER ================= */
+.site-footer {
+  background: #FFF6EF;
+  padding: 50px 0 20px;
+  margin-top: 60px;
+  color: #2B2B2B;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-logo {
+  max-width: 140px;
+  margin-bottom: 10px;
+}
+
+.site-footer h4 {
+  margin-bottom: 10px;
+  color: #4B1F1F;
+}
+
+.site-footer a {
+  color: #D86C9A;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #777;
+}

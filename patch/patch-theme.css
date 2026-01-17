@@ -1,0 +1,15 @@
+/* =====================================================
+   PATCH THEME – Color & Theme Overrides
+   ===================================================== */
+
+/* Example:
+:root {
+  --color-pink: #ff6f91;
+}
+*/
+.birthday-hero {
+  background-image: url("/public/images/ui/birthday-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
