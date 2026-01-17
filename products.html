@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Cakes – Cakeschahiye</title>
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="/styles/base.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/components.css" />
+
+  <!-- Patch Styles -->
+  <link rel="stylesheet" href="/patches/css/patch-ui.css" />
+</head>
+
+<body class="page-products">
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-flex">
+
+    <a class='logo-link logo-wrap' href='/core/'>
+      <img src="/public/images/logo/cakeschahiye-logo.png" class="logo" alt="Cakeschahiye Logo">
+      <span class="since-year">Since 2009</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href='/core/'>Home</a>
+      <a href='/core/birthday'>Birthday Club</a>
+
+      <a class='cart-link' href='/core/cart'>
+        🛒 <span id="cartCount">0</span>
+      </a>
+
+      <a href="https://wa.me/919548875964" class="btn-primary">Order Now</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container hero-content">
+    <h1>Our Cakes</h1>
+    <p>Freshly baked cakes for every celebration.</p>
+  </div>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<section class="best-sellers">
+  <div class="container">
+
+    <h2>Popular Choices</h2>
+
+    <div class="product-grid">
+
+      <!-- PRODUCT 1 -->
+      <div class="product-card">
+        <img src="/public/images/products/chocolate-truffle.png" alt="Chocolate Truffle Cake">
+
+        <div class="add-to-cart-overlay"
+          onclick="addToCart({ id: 1, name: 'Chocolate Truffle Cake', price: 799, image: '/public/images/products/chocolate-truffle.png' })">
+          Add to Cart
+        </div>
+
+        <div class="product-info">
+          <h3>Chocolate Truffle</h3>
+          <p>₹799 / kg</p>
+          <a href="https://wa.me/919548875964" class="btn-secondary">Order on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- PRODUCT 2 -->
+      <div class="product-card">
+        <img src="/public/images/products/red-velvet.png" alt="Red Velvet Cake">
+
+        <div class="add-to-cart-overlay"
+          onclick="addToCart({ id: 2, name: 'Red Velvet Cake', price: 899, image: '/public/images/products/red-velvet.png' })">
+          Add to Cart
+        </div>
+
+        <div class="product-info">
+          <h3>Red Velvet</h3>
+          <p>₹899 / kg</p>
+          <a href="https://wa.me/919548875964" class="btn-secondary">Order on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- PRODUCT 3 -->
+      <div class="product-card">
+        <img src="/public/images/products/butterscotch.png" alt="Butterscotch Cake">
+
+        <div class="add-to-cart-overlay"
+          onclick="addToCart({ id: 3, name: 'Butterscotch Cake', price: 749, image: '/public/images/products/butterscotch.png' })">
+          Add to Cart
+        </div>
+
+        <div class="product-info">
+          <h3>Butterscotch</h3>
+          <p>₹749 / kg</p>
+          <a href="https://wa.me/919548875964" class="btn-secondary">Order on WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="birthday-club">
+  <div class="container birthday-box">
+    <h2>🎂 Need a Custom Cake?</h2>
+    <p>Share your idea on WhatsApp and we’ll make it special.</p>
+    <a href="https://wa.me/919548875964" class="btn-primary">Chat on WhatsApp</a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <p>© <span id="year"></span> Cakeschahiye. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="/scripts/main.js"></script>
+<script src="/scripts/cart.js"></script>
+
+</body>
+</html>
